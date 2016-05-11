@@ -9,6 +9,7 @@
     tools:context="com.liferay.support.screenstest.UserActivity">
 
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,13 +20,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/last_name"
         />
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/email_address"
-        />
+        />-->
 
-    <!--<com.liferay.mobile.screens.webcontentdisplay.WebContentDisplayScreenlet
+       <!-- <com.liferay.mobile.screens.webcontentdisplay.WebContentDisplayScreenlet
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:articleId="20723"/>-->
@@ -35,9 +36,13 @@
         android:layout_height="wrap_content"/>
 
     <com.liferay.mobile.screens.ddl.list.DDLListScreenlet
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:recordSetId="20810"
-        app:labelFields="Text1,Text2"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:recordSetId="20965"
+        app:layoutId="@layout/ddl_list_material"
+        app:autoLoad="true"
+        app:firstPageSize="50"
+        app:pageSize="25"
+        app:labelFields="subject,description"/>
 
 </LinearLayout>

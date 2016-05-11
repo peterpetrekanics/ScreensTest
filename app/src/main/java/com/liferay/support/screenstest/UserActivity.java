@@ -22,12 +22,12 @@ public class UserActivity extends AppCompatActivity {
 
         TextView firstName = (TextView) findViewById(R.id.first_name);
         TextView lastName = (TextView) findViewById(R.id.last_name);
-        TextView emailAddress = (TextView) findViewById(R.id.email_address);
+        //TextView emailAddress = (TextView) findViewById(R.id.email_address);
         User user = SessionContext.getCurrentUser();
-        firstName.setText(user.getFirstName());
-        lastName.setText(user.getLastName());
-        emailAddress.setText(user.getEmail());
+        firstName.setText("Welcome " + user.getFirstName() + user.getLastName());
+        //emailAddress.setText(user.getEmail());
 
+        
 
     }
 
