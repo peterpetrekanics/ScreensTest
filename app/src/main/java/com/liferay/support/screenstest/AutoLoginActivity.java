@@ -1,6 +1,7 @@
 package com.liferay.support.screenstest;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +22,15 @@ public class AutoLoginActivity extends AppCompatActivity {
 
         Intent intent = null;
 
+        /*SharedPreferences preferences = getPreferences(1);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        editor.clear();
+        editor.commit();*/
+
+
         LiferayScreensContext.init(this);
+
         SessionContext.loadStoredCredentials(CredentialsStorageBuilder.StorageType.SHARED_PREFERENCES);
         if(SessionContext.hasUserInfo()){
             // For now, I will use MainActivity because there is a bug:
